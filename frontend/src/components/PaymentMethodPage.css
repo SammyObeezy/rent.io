@@ -1,77 +1,104 @@
-body {
+/* Resetting margins and paddings */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
-
-.dashboard {
-  display: flex;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.sidebar nav ul {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.sidebar nav ul li {
-  padding: 10px 0;
-  cursor: pointer;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-.main-content {
-  flex: 1;
+.payment-container {
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
-}
-
-.header {
-  margin-bottom: 20px;
-}
-
-.tenants, .vacant-properties, .recent-payments {
-  margin-bottom: 20px;
-}
-
-.tenant, .vacant-property, .payment {
-  background: white;
-  padding: 15px;
+  background-color: white;
   border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.rent-info {
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2e8b57; /* Green color */
+}
+
+.payment-methods {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-.progress-bar {
-  background: #e0e0e0;
+.payment-method {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 2px solid #2e8b57; /* Green border */
+  color: #2e8b57; /* Green text */
   border-radius: 5px;
-  height: 10px;
-  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.progress {
-  background: #007bff;
-  height: 100%;
+.payment-method:hover {
+  background-color: #2e8b57; /* Green background */
+  color: white; /* White text on hover */
+}
+
+.selected {
+  background-color: #2e8b57; /* Green background */
+  color: white; /* White text when selected */
+}
+
+.payment-details {
+  margin-top: 20px;
+}
+
+.payment-details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-details input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.vacant-property img {
-  width: 100%;
-  height: auto;
+.payment-details input:focus {
+  outline: none;
+  border-color: #2e8b57; /* Green border when input is focused */
+}
+
+.submit-btn {
+  background-color: #2e8b57; /* Green button background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #228b22; /* Darker green for hover effect */
+}
+
+@media (max-width: 600px) {
+  .payment-container {
+    padding: 15px;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-method {
+    margin-bottom: 10px;
+  }
 }

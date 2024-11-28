@@ -1,7 +1,7 @@
 import React from 'react';
 import './profile.css'; // Ensure to create a CSS file for styles
 
-const profile = () => {
+const Profile = () => {
   const tenants = [
     { name: '123 Main St. Apt 1', rent: 1200, dueDate: 'July 1, 2022' },
     { name: '123 Main St. Apt 2', rent: 1200, dueDate: 'July 1, 2022' },
@@ -76,4 +76,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './payment.css'; // Ensure to create a CSS file for styles
 
-const payment = () => {
+const Payment = () => {
   const currentBalance = 1200;
   const paymentMethod = 'Credit Card (ending in 1234)';
   const paymentHistory = [
@@ -44,4 +44,4 @@ const payment = () => {
   );
 };
 
-export default payment;
+export default Payment;
