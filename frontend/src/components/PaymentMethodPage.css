@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.tenants, .vacant-properties, .recent-payments {
+  margin-bottom: 20px;
+}
+
+.tenant, .vacant-property, .payment {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rent-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.progress {
+  background: #007bff;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.vacant-property img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
