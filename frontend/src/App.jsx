@@ -1,27 +1,25 @@
-import React from 'react';
-import SignUp from "./components/signup";
-import NotificationsPage from './components/NotificationsPage';
-import Profile from './components/profile';
-import Payment from './components/payment';
-import ProfilePage from './components/ProfilePage';
-import PaymentMethodPage from './components/PaymentMethodPage';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import BrowserRouter
 
-const App = () => {
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import Dashboard from "./components/Dashboard";
+
+
+function App() {
   return (
-    <Router>  {/* Wrap Routes inside Router */}
-      <div>
+    <Router> {/* Wrap the Routes component with BrowserRouter */}
+      <div className="App">
         <Routes>
-          <Route path="/" element={<SignUp />} />
-          <Route path="/notification" element={<NotificationsPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/user-profile" element={<Profile />} />
-          <Route path="/paymentmethod" element={<PaymentMethodPage />} />
-          <Route path="/payment" element={<Payment />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </Router>
   );
-};
+}
 
 export default App;
